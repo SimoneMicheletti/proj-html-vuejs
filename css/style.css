@@ -404,3 +404,116 @@
           margin-bottom: 50px;
           color: white;
         }
+
+    /* Know */
+
+        #know {
+          padding: 100px 0;
+          background-image: url(../img/bg-1.jpg);
+          background-position: center;
+          background-size: cover;
+        }
+
+        #know h2 {
+          color: white;
+        }
+
+        #know>.flex {
+          width: 50%;
+          margin: auto;
+        }
+
+        #know>.flex>div:first-child {
+          width: 50%;
+          padding-right: 20px;
+        }
+
+        #know>.flex>div:last-child {
+          width: 50%;
+          padding-left: 20px;
+        }
+
+        #know input {
+          margin-bottom: 10px;
+          padding: 10px;
+          width: 100%;
+          filter: opacity(0.5);
+          border-radius: 5px;
+        }
+
+        #know .green-but {
+          display: inline-block;
+        }
+
+
+
+/* Footer */
+
+    /* Foot-infoNav */
+
+        #foot-infonav {
+          padding: 100px 0;
+          background-color: #121117;
+          color: white;
+        }
+
+        #foot-infonav>.flex {
+          justify-content: space-between;
+          align-items: stretch;
+        }
+
+        #foot-infonav>.flex>div {
+          width: calc((100% - 60px) / 4);
+        }
+
+        #foot-infonav .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+
+        #foot-infonav .info .contacts a {
+          display: block;
+        }
+
+        #foot-infonav .info .contacts a:nth-child(2) {
+          margin: 10px 0;
+        }
+
+        #foot-infonav .info .contacts a i {
+          margin-right: 10px;
+        }
+
+        #foot-infonav .navig {
+          background-color: #19191f;
+          padding: 40px;
+          border-radius: 10px;
+        }
+
+        #foot-infonav .button {
+          border-radius: 5px;
+          color: white;
+          border: 1px solid #048383;
+          padding: 9.5px 19.5px;
+        }
+
+        #foot-infonav .navig div {
+          margin-top: 10px;
+        }
+
+        #foot-infonav .navig h3 {
+          margin-bottom: 30px;
+        }
+
+    /* credits */
+
+        #credits {
+          background-color: #0d0d11;
+        }
+
+        #credits .container {
+          font-size: 12px;
+          height: 60px;
+          justify-content: space-between;
+        }
