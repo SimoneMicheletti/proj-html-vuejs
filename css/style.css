@@ -20,7 +20,23 @@
     }
 
     h1 {
-      font-size: 60px;
+      font-size: 90px;
+    }
+
+    h2 {
+      font-size: 40px;
+    }
+
+    h3 {
+
+    }
+
+    h4 {
+      color: #45bbbc;
+    }
+
+    p {
+      color: #aeb0b0;
     }
 
     .fa, .fab, .fal, .far, .fas {
@@ -44,11 +60,17 @@
       color: white;
     }
 
+    .h-lighted {
+      display: inline-block;
+      background-color: rgba(4, 131, 131, 0.3);
+      padding: 3px 10px;
+    }
+
 
 
 /* Header */
 
-  /* Info */
+    /* Info */
 
         #info {
           background-color: #21333e;
@@ -68,7 +90,7 @@
           margin-left: 5px;
         }
 
-  /* NavBar */
+    /* NavBar */
 
         nav {
           height: 60px;
@@ -79,7 +101,7 @@
           margin-left: 20px;
         }
 
-  /* Jumbo */
+    /* Jumbo */
 
         #jumbo {
           height: 850px;
@@ -91,10 +113,6 @@
           margin-left: 50%;
           height: calc(100% - 60px);
           width: 500px;
-        }
-
-        #jumbo>div>div>div:first-child {
-          color: #45bbbc;
         }
 
         #jumbo h1 {
@@ -125,4 +143,106 @@
 
 /* Main */
 
-  /* Company */
+    /* Company */
+
+        #company {
+          background-color: #121117;
+          color: white;
+        }
+
+        #company .container {
+        }
+
+        #company .container>div {
+          padding: 100px 0;
+          width: 50%;
+        }
+
+        /* company left */
+
+            #company .left {
+              margin-right: 100px;
+            }
+
+            #company .left h2 {
+              margin: 20px auto;
+            }
+
+            #company .left p:last-child {
+              margin-top: 15px;
+            }
+
+        /* company right */
+
+            #company .right {
+              flex-wrap: wrap;
+            }
+
+            #company .right>div {
+              width: 50%;
+              margin-top: 10px;
+            }
+
+            #company .right>div:nth-child(3), #company .right>div:nth-child(4) {
+              margin-top: 30px
+            }
+
+            #company .right p {
+              margin-top: 15px
+            }
+
+            #company .right i {
+              color: #45bbbc;
+              margin-right: 5px;
+            }
+
+    /* Services */
+
+        #services {
+          padding: 100px 0;
+          background-color: #e8ecea;
+        }
+
+        #services h2 {
+          margin: 20px auto;
+        }
+
+        #services .p-see {
+          justify-content: space-between;
+          margin-bottom: 20px;
+        }
+
+        #services .p-see>p {
+          width: 80%;
+        }
+
+        #services div:last-child {
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+
+        #services .box {
+          background-color: white;
+          padding: 30px;
+          border-radius: 10px;
+          width: calc((100% - 60px) / 3);
+          margin-top: 30px;
+          position: relative;
+        }
+
+        #services .box i {
+          color: #45bbbc;
+          font-size: 40px;
+        }
+
+        #services .box h3 {
+          margin: 20px 0;
+        }
+
+        #services .box i.fas.fa-arrow-right {
+          position: absolute;
+          top: 30px;
+          right: 30px;
+          font-size: 25px;
+          filter: opacity(0.5);
+        }
