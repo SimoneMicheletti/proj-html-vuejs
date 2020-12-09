@@ -1,7 +1,128 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  border: 0;
-}
+/* Generals */
 
-/* FLEX IS THE WAY */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      border: 0;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    a:hover {
+      color: #048383;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+
+    .fa, .fab, .fal, .far, .fas {
+      line-height: inherit;
+    }
+
+    .container {
+      width: 60%;
+      margin: auto;
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+    }
+
+    .green-but {
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #048383;
+      color: white;
+    }
+
+
+
+/* Header */
+
+  /* Info */
+
+        #info {
+          background-color: #21333e;
+          color: #aeb0b0;
+        }
+
+        #info .container {
+          justify-content: space-between;
+          height: 40px;
+        }
+
+        #info .container>div:last-child>* {
+          margin-left: 30px;
+        }
+
+        #info .container div span {
+          margin-left: 5px;
+        }
+
+  /* NavBar */
+
+        nav {
+          height: 60px;
+          justify-content: space-between;
+        }
+
+        nav>div>* {
+          margin-left: 20px;
+        }
+
+  /* Jumbo */
+
+        #jumbo {
+          height: 850px;
+          background-image: url(../img/bg-6.jpg);
+          background-position: left;
+        }
+
+        #jumbo>div {
+          margin-left: 50%;
+          height: calc(100% - 60px);
+          width: 500px;
+        }
+
+        #jumbo>div>div>div:first-child {
+          color: #45bbbc;
+        }
+
+        #jumbo h1 {
+          margin: 15px auto 25px;
+        }
+
+        #jumbo-form input , #jumbo-form select {
+          width: 245px;
+          margin-bottom: 10px;
+          background-color: lightgrey;
+          border-radius: 5px;
+          padding: 10px;
+        }
+
+        #jumbo-form input:first-child {
+          margin-right: 10px;
+        }
+
+        #jumbo-form .green-but:last-child {
+          background-color: white;
+          border: 1px solid #048383;
+          color: #048383;
+          padding: 9.5px 19.5px;
+          margin-left: 10px;
+        }
+
+
+
+/* Main */
+
+  /* Company */

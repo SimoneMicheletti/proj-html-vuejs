@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>Proj: Insurance-Consulting</title>
   </head>
@@ -12,17 +13,86 @@
     <div id="app">
 
       <header>
+
         <!-- Info -->
-        <section></section>
-        <!-- NavBar -->
-        <nav></nav>
+        <section id="info">
+          <div class="container flex">
+            <div class="flex">
+              <a href="index.html"><i class="fas fa-clock"></i><span>Open Hours: {time imported}</span></a>
+            </div>
+            <div class="flex">
+              <a href="index.html"><i class="fas fa-phone"></i><span>{phone number imported}</span></a>
+              <a href="index.html"><i class="fas fa-envelope"></i><span>{mail imported}</span></a>
+              <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+              <a href="index.html"><i class="fab fa-twitter"></i></a>
+              <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </section>
+
         <!-- Jumbotron -->
-        <section></section>
+        <section id="jumbo">
+
+          <!-- NavBar -->
+          <nav class="container flex">
+            <img src="" alt="LOGO">
+            <div class="flex">
+              <a href="index.html">{nev imp}</a>
+              <a href="index.html">{nev imp}</a>
+              <a href="index.html">{nev imp}</a>
+              <a href="index.html">{nev imp}</a>
+              <a href="index.html">{nev imp}</a>
+              <a href="index.html">{nev imp}</a>
+              <a href="index.html" class="green-but">GET IN TOUCH</a>
+            </div>
+          </nav>
+
+          <!-- Jumbotron form -->
+          <div class="flex">
+            <div>
+              <div>
+                FUSION & ACQUISITIONS
+              </div>
+              <h1>Insurance Consulting</h1>
+              <div id="jumbo-form">
+                <div class="flex">
+                  <input type="text" name="" value="" placeholder="Name">
+                  <input type="text" name="" value="" placeholder="Email">
+                </div>
+                <div class="flex">
+                  <input type="text" name="" value="" placeholder="Phone">
+                  <select class="" name="" placeholder="we">
+                    <option value="" selected disabled>More Info</option>
+                    <option value="">Info 1</option>
+                    <option value="">Info 2</option>
+                    <option value="">Info 3</option>
+                  </select>
+                </div>
+                <div class="flex">
+                  <div class="green-but">
+                    GET IN TOUCH
+                  </div>
+                  <div class="green-but">
+                    READ MORE
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </section>
+
       </header>
 
       <main>
+
         <!-- Company -->
-        <section></section>
+        <section>
+
+
+        </section>
+
         <!-- Services -->
         <section></section>
         <!-- Process -->
