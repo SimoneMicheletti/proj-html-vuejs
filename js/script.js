@@ -2,6 +2,12 @@ var app = new Vue ({
   el: "#app",
   data: {
 
+    comunication: { tf: false,
+                    type: ""
+                  },
+
+    closeLink: "",
+
     company:  { openHours: "Mon - Sat - 9:00 - 18:00",
                 phoneNum: "+1 (305) 1234-5678",
                 email: "hello@example.com",
@@ -78,5 +84,43 @@ var app = new Vue ({
                       ]
               }
             ]
+  }, // Fine data
+
+  methods: {
+
+    // Funzione Newsletter
+    news() {
+      if (this.user.name != "" && this.user.email != "") {
+        this.comunication.tf = true;
+        this.comunication.type = "news";
+      } else {
+        alert("Please fill in both forms")
+      }
+      this.closeLink = "#know"
+    },
+
+    // Funzione Contattaci
+    getInTouch() {
+      if (this.user.name != "" && this.user.email != "" && this.user.phoneNum != "" && this.user.type != "") {
+        this.comunication.tf = true;
+        this.comunication.type = "contact";
+      } else {
+        alert("Please fill in all forms")
+      }
+      this.closeLink = "#jumbo"
+    },
+
+    // Chiudi comunicazioni
+    close() {
+      this.user.name = "";
+      this.user.email = "";
+      this.user.phoneNum = "";
+      this.user.type = "";
+      this.comunication.tf = false;
+      this.comunication.type = "";
+    }
+
   }
+
+
 })

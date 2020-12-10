@@ -69,6 +69,7 @@
     .green-but:hover {
       color: white;
       background-color: #c86f29;
+      cursor: pointer;
     }
 
     .trasp-but {
@@ -587,3 +588,53 @@
           height: 60px;
           justify-content: space-between;
         }
+
+        #credits a .elf:hover {
+          color: #c86f29;
+        }
+
+
+
+/* Comunication */
+
+    #comunication {
+      height: 100vh;
+      width: 100vw;
+      background-color: #1c2224;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #window {
+      width: 700px;
+      background-color: #e8ecea;
+      border-radius: 15px 0 15px 15px;
+      padding: 40px;
+      color: grey;
+      position: relative;
+    }
+
+    #window-close {
+      width: 120px;
+      right: -0.5px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 5px 5px 0 0;
+      height: 30px;
+      position: absolute;
+      background-color: #e8ecea;
+      top: -30px;
+      right: 0px;
+      transition: 00s;
+    }
+
+    #window-close:hover {
+      cursor: pointer;
+      color: white;
+    }
+
+    #window-obj>div>div:nth-child(2) {
+      margin: 40px 0;
+    }

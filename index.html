@@ -14,7 +14,7 @@
     <div id="app">
 
       <!-- HEADER -->
-      <header>
+      <header v-if="!comunication.tf">
 
         <!-- Info -->
         <section id="info">
@@ -45,7 +45,7 @@
               <a href="#process">PROCESS</a>
               <a href="#team">TEAM</a>
               <a href="index.html">BLOG</a>
-              <a href="index.html" class="green-but">GET IN TOUCH</a>
+              <a href="#jumbo" class="green-but">GET IN TOUCH</a>
             </div>
           </nav>
 
@@ -56,19 +56,19 @@
               <h1>Insurance Consulting</h1>
               <div id="jumbo-form">
                 <div class="flex">
-                  <input type="text" placeholder="Name" v-model="user.name">
-                  <input type="text" placeholder="Email" v-model="user.email">
+                  <input type="text" placeholder="Name" v-model="user.name" @keypress.enter="getInTouch()">
+                  <input type="email" placeholder="Email" v-model="user.email" @keypress.enter="getInTouch()">
                 </div>
                 <div class="flex">
-                  <input type="text" placeholder="Phone" v-model="user.phoneNum">
-                  <select class="" name="" placeholder="we" v-model="user.type">
+                  <input type="text" placeholder="Phone" v-model="user.phoneNum" @keypress.enter="getInTouch()">
+                  <select class="" name="" placeholder="we" v-model="user.type" @keypress.enter="getInTouch()">
                     <option value="" selected disabled>More Info</option>
                     <option value="private">Private</option>
                     <option value="company">Company</option>
                   </select>
                 </div>
                 <div class="flex">
-                  <a href="index.html" class="green-but">GET IN TOUCH</a>
+                  <div @click="getInTouch()" class="green-but">GET IN TOUCH</div>
                   <a href="index.html" class="trasp-but">READ MORE</a>
                 </div>
               </div>
@@ -81,7 +81,7 @@
       </header>
 
       <!-- MAIN -->
-      <main>
+      <main v-if="!comunication.tf">
 
         <!-- Company -->
         <section id="company">
@@ -327,16 +327,16 @@
               <p>Follow closely and receive content about our company and the news of the current market.</p>
             </div>
             <div>
-              <input type="text" placeholder="Name" v-model="user.name">
-              <input type="text" placeholder="Email" v-model="user.email">
-              <a href="index.html" class="green-but">SUBSCRIBE</a>
+              <input type="text" placeholder="Name" v-model="user.name" @keypress.enter="news()">
+              <input type="email" placeholder="Email" v-model="user.email" @keypress.enter="news()">
+              <div class="green-but" @click="news()">SUBSCRIBE</div>
             </div>
           </div>
         </section>
       </main>
 
       <!-- FOOTER -->
-      <footer>
+      <footer v-if="!comunication.tf">
 
         <!-- footer Info-Nav -->
         <section id="foot-infonav">
@@ -372,6 +372,51 @@
           </div>
         </section>
       </footer>
+
+      <!-- EXTRA -->
+      <section id="comunication" v-if="comunication.tf">
+        <div id="window">
+
+          <!-- Chiudi comunicazione -->
+          <a :href="closeLink" id="window-close" @click="close()">
+            <div>CLOSE</div>
+            <i class="fas fa-times"></i>
+          </a>
+
+          <div id="window-obj">
+
+            <!-- comunicazione per "newsletter" -->
+            <div v-if="comunication.type === 'news'">
+              <div>
+                Dear {{user.name.toUpperCase()}},
+              </div>
+              <div>
+                We thank you for having activated the Newsletter service at the email address:
+              </div>
+              <div>
+                {{user.email.toUpperCase()}}
+              </div>
+            </div>
+
+            <!-- comunicazione per "contattaci" -->
+            <div v-if="comunication.type === 'contact'">
+              <div>
+                Dear {{user.name.toUpperCase()}}, thank you for choosing us.
+              </div>
+              <div>
+                You will be contacted as soon as possible by one of our operators at the following addresses:
+              </div>
+              <div>
+                Email: {{user.email.toUpperCase()}}
+              </div>
+              <div>
+                Phone Number: {{user.phoneNum.toUpperCase()}}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
     </div>
     <script src="js/script.js"></script>
