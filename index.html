@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;800&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>Proj: Insurance-Consulting</title>
@@ -12,6 +13,7 @@
   <body>
     <div id="app">
 
+      <!-- HEADER -->
       <header>
 
         <!-- Info -->
@@ -35,7 +37,7 @@
 
           <!-- NavBar -->
           <nav class="container flex">
-            <img src="" alt="LOGO">
+            <div class="logo"><a href="index.html"><span class="h-lighted elf">N E X</span> G E N</a></div>
             <div class="flex">
               <a href="index.html">HOME</a>
               <a href="#company">ABOUT</a>
@@ -66,12 +68,8 @@
                   </select>
                 </div>
                 <div class="flex">
-                  <div class="green-but" @click="log()">
-                    GET IN TOUCH
-                  </div>
-                  <div class="green-but">
-                    READ MORE
-                  </div>
+                  <a href="index.html" class="green-but">GET IN TOUCH</a>
+                  <a href="index.html" class="trasp-but">READ MORE</a>
                 </div>
               </div>
             </div>
@@ -82,6 +80,7 @@
 
       </header>
 
+      <!-- MAIN -->
       <main>
 
         <!-- Company -->
@@ -126,7 +125,7 @@
             <h2>Excellence in <span class="h-lighted">Services</span></h2>
             <div class="flex p-see">
               <p>We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of wxperienced and renowned professionals. There are some option that tou can hire</p>
-              <div class="green-but">SEE ALL</div>
+              <a href="index.html" class="green-but">SEE ALL</a>
             </div>
 
             <div class="flex">
@@ -293,7 +292,7 @@
             <h2>Latest <span class="h-lighted">News</span></h2>
             <div class="flex p-see">
               <p>We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of wxperienced and renowned professionals. There are some option that tou can hire</p>
-              <div class="green-but">SEE ALL</div>
+              <a href="index.html" class="green-but">SEE ALL</a>
             </div>
             <div class="flex">
               <div class="box">
@@ -330,13 +329,13 @@
             <div>
               <input type="text" placeholder="Name" v-model="user.name">
               <input type="text" placeholder="Email" v-model="user.email">
-              <div class="green-but">SUBSCRIBE</div>
+              <a href="index.html" class="green-but">SUBSCRIBE</a>
             </div>
           </div>
         </section>
-
       </main>
 
+      <!-- FOOTER -->
       <footer>
 
         <!-- footer Info-Nav -->
@@ -344,16 +343,14 @@
           <div class="container flex">
 
             <div class="info">
-              <div>LOGO</div>
+              <div class="logo"><a href="index.html"><span class="h-lighted elf">N E X</span> G E N</a></div>
               <p>A Functional HTML Template for Corporate & Business.</p>
               <div class="contacts">
                 <a href="index.html"><i class="fas fa-phone"></i><span>{{company.phoneNum}}</span></a>
                 <a href="index.html"><i class="fas fa-envelope"></i><span>{{company.email}}</span></a>
                 <a href="index.html"><i class="fas fa-map-marker-alt"></i><span>{{company.address}}</span></a>
               </div>
-              <div class="button">
-                GET IN TOUCH
-              </div>
+              <a href="index.html" class="trasp-but">GET IN TOUCH</a>
             </div>
 
             <div class="navig" v-for="element in wStruct">
