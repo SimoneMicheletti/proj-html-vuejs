@@ -409,6 +409,12 @@
               margin-right: 5px;
             }
 
+            #team .team-id span:hover {
+              background-color: rgba(200, 111, 41, 0.3);
+              color: #c86f29;
+
+            }
+
         /* Team right */
 
             #team .right {
