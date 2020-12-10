@@ -14,7 +14,7 @@
     <div id="app">
 
       <!-- HEADER -->
-      <header v-if="!comunication.tf">
+      <header>
 
         <!-- Info -->
         <section id="info">
@@ -344,7 +344,7 @@
 
             <div class="info">
               <div class="logo"><a href="index.html"><span class="h-lighted elf">N E X</span> G E N</a></div>
-              <p>A Functional HTML Template for Corporate & Business.</p>
+              <p>{{company.description}}</p>
               <div class="contacts">
                 <a href="index.html"><i class="fas fa-phone"></i><span>{{company.phoneNum}}</span></a>
                 <a href="index.html"><i class="fas fa-envelope"></i><span>{{company.email}}</span></a>
@@ -378,7 +378,7 @@
         <div id="window">
 
           <!-- Chiudi comunicazione -->
-          <a :href="closeLink" id="window-close" @click="close()">
+          <a href="index.html" id="window-close" @click="close()">
             <div>CLOSE</div>
             <i class="fas fa-times"></i>
           </a>

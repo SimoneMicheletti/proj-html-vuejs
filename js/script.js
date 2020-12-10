@@ -6,12 +6,11 @@ var app = new Vue ({
                     type: ""
                   },
 
-    closeLink: "",
-
     company:  { openHours: "Mon - Sat - 9:00 - 18:00",
                 phoneNum: "+1 (305) 1234-5678",
                 email: "hello@example.com",
-                address: "Main Avenue, 987"
+                address: "Main Avenue, 987",
+                description: "A Functional HTML Template for Corporate & Business."
               },
 
     user: { name: "",
@@ -107,7 +106,6 @@ var app = new Vue ({
       } else {
         alert("Please fill in all forms")
       }
-      this.closeLink = "#jumbo"
     },
 
     // Chiudi comunicazioni

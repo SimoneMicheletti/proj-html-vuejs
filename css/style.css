@@ -154,7 +154,7 @@
     /* Jumbo */
 
         #jumbo {
-          height: 850px;
+          height: calc(100vh - 40px);
           background-image: url(../img/bg-6.jpg);
           background-position: left;
           background-size: cover;
@@ -270,7 +270,6 @@
         #services .box {
           padding: 30px;
           transition: 0.2s;
-
         }
 
         #services .box:hover {
@@ -323,6 +322,7 @@
           width: 80%;
           margin: auto;
           align-items: flex-start;
+          justify-content: space-between;
         }
 
         #process .step {
@@ -558,7 +558,7 @@
 
         #foot-infonav .navig {
           background-color: #19191f;
-          padding: 40px;
+          padding: 40px 20px;
           border-radius: 10px;
         }
 
@@ -606,10 +606,12 @@
     #comunication {
       height: 100vh;
       width: 100vw;
-      background-color: #1c2224;
+      background-color: rgba(0, 0, 0, 0.9);
       display: flex;
       align-items: center;
       justify-content: center;
+      position: absolute;
+      top: 0;
     }
 
     #window {
@@ -638,7 +640,7 @@
 
     #window-close:hover {
       cursor: pointer;
-      color: white;
+      color: #c86f29;
     }
 
     #window-obj>div>div:nth-child(2) {
