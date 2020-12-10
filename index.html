@@ -18,11 +18,11 @@
         <section id="info">
           <div class="container flex">
             <div class="flex">
-              <a href="index.html"><i class="fas fa-clock"></i><span>Open Hours: {time imported}</span></a>
+              <a href="index.html"><i class="fas fa-clock"></i><span>Open Hours: {{company.openHours}}</span></a>
             </div>
             <div class="flex">
-              <a href="index.html"><i class="fas fa-phone"></i><span>{phone number imported}</span></a>
-              <a href="index.html"><i class="fas fa-envelope"></i><span>{mail imported}</span></a>
+              <a href="index.html"><i class="fas fa-phone"></i><span>{{company.phoneNum}}</span></a>
+              <a href="index.html"><i class="fas fa-envelope"></i><span>{{company.email}}</span></a>
               <a href="index.html"><i class="fab fa-facebook-f"></i></a>
               <a href="index.html"><i class="fab fa-twitter"></i></a>
               <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
@@ -37,12 +37,12 @@
           <nav class="container flex">
             <img src="" alt="LOGO">
             <div class="flex">
-              <a href="index.html">{nev imp}</a>
-              <a href="index.html">{nev imp}</a>
-              <a href="index.html">{nev imp}</a>
-              <a href="index.html">{nev imp}</a>
-              <a href="index.html">{nev imp}</a>
-              <a href="index.html">{nev imp}</a>
+              <a href="index.html">HOME</a>
+              <a href="#company">ABOUT</a>
+              <a href="#services">SERVICES</a>
+              <a href="#process">PROCESS</a>
+              <a href="#team">TEAM</a>
+              <a href="index.html">BLOG</a>
               <a href="index.html" class="green-but">GET IN TOUCH</a>
             </div>
           </nav>
@@ -54,20 +54,19 @@
               <h1>Insurance Consulting</h1>
               <div id="jumbo-form">
                 <div class="flex">
-                  <input type="text" name="" value="" placeholder="Name">
-                  <input type="text" name="" value="" placeholder="Email">
+                  <input type="text" placeholder="Name" v-model="user.name">
+                  <input type="text" placeholder="Email" v-model="user.email">
                 </div>
                 <div class="flex">
-                  <input type="text" name="" value="" placeholder="Phone">
-                  <select class="" name="" placeholder="we">
+                  <input type="text" placeholder="Phone" v-model="user.phoneNum">
+                  <select class="" name="" placeholder="we" v-model="user.type">
                     <option value="" selected disabled>More Info</option>
-                    <option value="">Info 1</option>
-                    <option value="">Info 2</option>
-                    <option value="">Info 3</option>
+                    <option value="private">Private</option>
+                    <option value="company">Company</option>
                   </select>
                 </div>
                 <div class="flex">
-                  <div class="green-but">
+                  <div class="green-but" @click="log()">
                     GET IN TOUCH
                   </div>
                   <div class="green-but">
@@ -329,12 +328,13 @@
               <p>Follow closely and receive content about our company and the news of the current market.</p>
             </div>
             <div>
-              <input type="text" name="" value="" placeholder="Name">
-              <input type="text" name="" value="" placeholder="Email">
+              <input type="text" placeholder="Name" v-model="user.name">
+              <input type="text" placeholder="Email" v-model="user.email">
               <div class="green-but">SUBSCRIBE</div>
             </div>
           </div>
         </section>
+
       </main>
 
       <footer>
@@ -347,43 +347,21 @@
               <div>LOGO</div>
               <p>A Functional HTML Template for Corporate & Business.</p>
               <div class="contacts">
-                <a href="index.html"><i class="fas fa-phone"></i><span>{phone number imported}</span></a>
-                <a href="index.html"><i class="fas fa-envelope"></i><span>{mail imported}</span></a>
-                <a href="index.html"><i class="fas fa-map-marker-alt"></i><span>{position imported}</span></a>
+                <a href="index.html"><i class="fas fa-phone"></i><span>{{company.phoneNum}}</span></a>
+                <a href="index.html"><i class="fas fa-envelope"></i><span>{{company.email}}</span></a>
+                <a href="index.html"><i class="fas fa-map-marker-alt"></i><span>{{company.address}}</span></a>
               </div>
               <div class="button">
                 GET IN TOUCH
               </div>
             </div>
 
-            <div class="navig">
-              <h3>About</h3>
-              <div>LINK</div>
-              <div>LINK</div>
-              <div>LINK</div>
-              <div>LINK</div>
-              <div>LINK</div>
-              <div>LINK</div>
-            </div>
-
-            <div class="navig">
-              <h3>About</h3>
-              <div>LINK</div>
-              <div>LINK</div>
-              <div>LINK</div>
-              <div>LINK</div>
-              <div>LINK</div>
-              <div>LINK</div>
-            </div>
-
-            <div class="navig">
-              <h3>About</h3>
-              <div>LINK</div>
-              <div>LINK</div>
-              <div>LINK</div>
-              <div>LINK</div>
-              <div>LINK</div>
-              <div>LINK</div>
+            <div class="navig" v-for="element in wStruct">
+              <h3>{{element.title}}</h3>
+              <div v-for="item in element.list">
+                <i class="fas fa-chevron-right"></i>
+                <a :href="item.link">{{item.obj}}</a>
+              </div>
             </div>
 
           </div>

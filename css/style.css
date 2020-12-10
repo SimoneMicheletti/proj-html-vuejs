@@ -506,6 +506,15 @@
           margin-bottom: 30px;
         }
 
+        #foot-infonav .navig a {
+          color: #aeb0b0;
+          margin-left: 10px;
+        }
+
+        #foot-infonav .navig a:hover {
+          color: #048383;
+        }
+
     /* credits */
 
         #credits {
