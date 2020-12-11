@@ -7,7 +7,6 @@
     }
 
     body {
-      /* font-family: 'Lato', sans-serif; */
       font-family: 'Rubik', sans-serif;
     }
 
@@ -42,10 +41,6 @@
 
     p {
       color: #aeb0b0;
-    }
-
-    .fa, .fab, .fal, .far, .fas {
-      line-height: inherit;
     }
 
     .container {
@@ -158,6 +153,8 @@
           background-image: url(../img/bg-6.jpg);
           background-position: left;
           background-size: cover;
+          position: relative;
+          z-index: 1;
         }
 
         #jumbo>div {
@@ -645,4 +642,25 @@
 
     #window-obj>div>div:nth-child(2) {
       margin: 40px 0;
+    }
+
+
+
+/* Back Top */
+
+    #back-top {
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 50%;
+      border: 2px solid #048383;
+      color: #048383;
+      font-size: 20px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    #back-top:hover {
+      border-color: #c86f29;
+      color: #c86f29;
     }

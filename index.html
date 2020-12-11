@@ -37,14 +37,9 @@
 
           <!-- NavBar -->
           <nav class="container flex">
-            <div class="logo"><a href="index.html"><span class="h-lighted elf">N E X</span> G E N</a></div>
+            <div class="logo"><a href="index.html"><span class="h-lighted elf">{{company.name1.toUpperCase()}}</span> {{company.name2.toUpperCase()}}</a></div>
             <div class="flex">
-              <a href="index.html">HOME</a>
-              <a href="#company">ABOUT</a>
-              <a href="#services">SERVICES</a>
-              <a href="#process">PROCESS</a>
-              <a href="#team">TEAM</a>
-              <a href="index.html">BLOG</a>
+              <a v-for="item in homeStruct" :href="item.link">{{item.obj}}</a>
               <a href="#jumbo" class="green-but">GET IN TOUCH</a>
             </div>
           </nav>
@@ -52,8 +47,8 @@
           <!-- Jumbotron form -->
           <div class="flex">
             <div>
-              <h4>FUSION & ACQUISITIONS</h4>
-              <h1>Insurance Consulting</h1>
+              <h4>{{company.focus.toUpperCase()}}</h4>
+              <h1>{{company.sector}}</h1>
               <div id="jumbo-form">
                 <div class="flex">
                   <input type="text" placeholder="Name" v-model="user.name" @keypress.enter="getInTouch()">
@@ -219,51 +214,15 @@
                 <p>Ethics and integrity are the bases on which our professuibaks build their careers.</p>
                 <p>They are founfamentals that become daily attitudes.</p>
                 <div class="flex">
-                  <div class="team-id flex">
-                    <img src="img/team-1.jpg" alt="David Cooper">
+                  <div v-for="id in team" class="team-id flex">
+                    <img :src="id.img" alt="id.name">
                     <div>
-                      <h3>David Cooper</h3>
-                      <p>CTO & CO-FOUNDER</p>
+                      <h3>{{id.name}}</h3>
+                      <p>{{id.position}}</p>
                       <div class="flex">
-                        <a href="#team"><span class="elf flex"><i class="fab fa-facebook-f"></i></span></a>
-                        <a href="#team"><span class="elf flex"><i class="fab fa-twitter"></i></span></a>
-                        <a href="#team"><span class="elf flex"><i class="fab fa-linkedin-in"></i></span></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="team-id flex">
-                    <img src="img/team-3.jpg" alt="David Cooper">
-                    <div>
-                      <h3>Oliver Jones</h3>
-                      <p>CHIEF PROCUREMENT</p>
-                      <div class="flex">
-                        <a href="#team"><span class="elf flex"><i class="fab fa-facebook-f"></i></span></a>
-                        <a href="#team"><span class="elf flex"><i class="fab fa-twitter"></i></span></a>
-                        <a href="#team"><span class="elf flex"><i class="fab fa-linkedin-in"></i></span></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="team-id flex">
-                    <img src="img/team-2.jpg" alt="David Cooper">
-                    <div>
-                      <h3>Emma Lopez</h3>
-                      <p>CHIEF MARKETING</p>
-                      <div class="flex">
-                        <a href="#team"><span class="elf flex"><i class="fab fa-facebook-f"></i></span></a>
-                        <a href="#team"><span class="elf flex"><i class="fab fa-twitter"></i></span></a>
-                        <a href="#team"><span class="elf flex"><i class="fab fa-linkedin-in"></i></span></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="team-id flex">
-                    <img src="img/team-4.jpg" alt="David Cooper">
-                    <div>
-                      <h3>T. Johnson</h3>
-                      <p>CEO & PRESIDENT</p>
-                      <div class="flex">
-                        <a href="#team"><span class="elf flex"><i class="fab fa-facebook-f"></i></span></a>
-                        <a href="#team"><span class="elf flex"><i class="fab fa-twitter"></i></span></a>
-                        <a href="#team"><span class="elf flex"><i class="fab fa-linkedin-in"></i></span></a>
+                        <a :href="id.linkFb"><span class="elf flex"><i class="fab fa-facebook-f"></i></span></a>
+                        <a :href="id.linkTw"><span class="elf flex"><i class="fab fa-twitter"></i></span></a>
+                        <a :href="id.linkIn"><span class="elf flex"><i class="fab fa-linkedin-in"></i></span></a>
                       </div>
                     </div>
                   </div>
@@ -343,7 +302,7 @@
           <div class="container flex">
 
             <div class="info">
-              <div class="logo"><a href="index.html"><span class="h-lighted elf">N E X</span> G E N</a></div>
+              <div class="logo"><a href="index.html"><span class="h-lighted elf">{{company.name1.toUpperCase()}}</span> {{company.name2.toUpperCase()}}</a></div>
               <p>{{company.description}}</p>
               <div class="contacts">
                 <a href="index.html"><i class="fas fa-phone"></i><span>{{company.phoneNum}}</span></a>
@@ -373,8 +332,8 @@
         </section>
       </footer>
 
-      <!-- EXTRA -->
-      <section id="comunication" v-if="comunication.tf">
+      <!-- COMUNICAZIONI -->
+      <div id="comunication" v-if="comunication.tf">
         <div id="window">
 
           <!-- Chiudi comunicazione -->
@@ -416,7 +375,10 @@
 
           </div>
         </div>
-      </section>
+      </div>
+
+      <!-- BACK TOP PAGE -->
+      <a id="back-top" href="index.html"><i class="fas fa-arrow-up"></i></a>
 
     </div>
     <script src="js/script.js"></script>
